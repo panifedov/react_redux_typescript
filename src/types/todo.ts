@@ -1,5 +1,5 @@
 export interface TodoState {
-    todos: any[];
+    todo: any[];
     loading: boolean;
     errors: null | string;
     page: number;
@@ -7,33 +7,33 @@ export interface TodoState {
 }
 
 export enum TodoActionType {
-    FETCH_TODOS= 'FETCH_TODOS',
-    FETCH_TODOS_SUCCESS = 'FETCH_TODOS_SUCCESS',
-    FETCH_TODOS_ERROR = 'FETCH_TODOS_ERROR',
+    FETCH_TODO= 'FETCH_TODO',
+    FETCH_TODO_SUCCESS = 'FETCH_TODO_SUCCESS',
+    FETCH_TODO_ERROR = 'FETCH_TODO_ERROR',
     SET_TODO_PAGE = 'SET_TODO_PAGE'
 }
 
 interface FetchTodoAction {
-    type: TodoActionType.FETCH_TODOS;
+    type: TodoActionType.FETCH_TODO;
 }
 
 interface FetchTodoSuccessAction {
-    type: TodoActionType.FETCH_TODOS_SUCCESS;
+    type: TodoActionType.FETCH_TODO_SUCCESS;
     payload: any[];
 }
 
 interface FetchTodoErrorAction {
-    type: TodoActionType.FETCH_TODOS_ERROR;
+    type: TodoActionType.FETCH_TODO_ERROR;
     payload: string;
 }
 
 interface SetTodoPageAction {
     type: TodoActionType.SET_TODO_PAGE;
-    payload: string;
+    payload: number;
 }
 
 
-export type TodoAction = FetchTodoErrorAction 
+export type TodoActions = FetchTodoErrorAction 
 | FetchTodoSuccessAction 
 | FetchTodoAction 
 | SetTodoPageAction
