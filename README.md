@@ -1,8 +1,3 @@
 # react_redux_typescript
  
-  fixed: 
-
-  CombineReducer, Provider
-  UseTypedSelector
-  async action creator + typing
-  UseActions
+  consolidated his knowledge in: CombineReducer,Provider,create hook,asynchronous action creator + typing
